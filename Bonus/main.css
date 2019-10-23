@@ -8,6 +8,8 @@ body{
 }
 p {
   font-family: 'Audiowide', cursive;
+  text-decoration: underline;
+  margin: 20px 0;
 }
 .page-wrapper {
   width: 80%;
@@ -16,10 +18,15 @@ p {
   padding-top: 30px;
   font-size: 18px;
   display: flex;
+  flex-wrap: wrap;
 }
 .surname {
-  flex-grow: 1;
+  flex-basis: 50%;
   border: 1px solid #000;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   height: 500px;
+  text-align: center;
+}
+#position{
+  margin-top: 40px;
 }
