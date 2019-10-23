@@ -10,16 +10,22 @@ var unorderedSurname = ['Vena', 'Siri', 'Biava', 'Grassi', 'Inglima', 'Neroni', 
 //chiedo il Cognome, lo inserisco nell'array e visualizzo
 var userSurname = prompt('Inserisci il tuo Cognome');
 unorderedSurname.push(userSurname);
-console.log(unorderedSurname);
+console.log('unorderedSurname ' + unorderedSurname);
 
+//visualizzo array non ordinato
+var unorderedOutput = document.getElementById('unordered');
+for (var b = 0; b < unorderedSurname.length; b++) {
+  unorderedOutput.innerHTML += unorderedSurname[b] + ' ';
+}
 //ordino l'array alfabeticamente
 var orderedSurname = unorderedSurname.sort();
-console.log(orderedSurname);
+console.log('orderedSurname ' + orderedSurname);
 
 //visualizzo array ordinato
-var orderedOutput = document.getElementById('ordered');
+var orderedOutput;
 for (var a = 0; a < orderedSurname.length; a++) {
-  orderedOutput.innerHTML += orderedSurname[a] + ' - ';
+  orderedOutput = document.getElementById('ordered').innerHTML;
+  document.getElementById('ordered').innerHTML = orderedOutput + orderedSurname[a] + ' ';
 }
 
 //stampo posizione dell'array in cui si trova il nome
