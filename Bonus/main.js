@@ -4,11 +4,26 @@
 // Scrivi anche la posizione della lista in cui il
 // nuovo utente si trova
 
+//BONUS
+//Controllo che valore inserito non sia vuoto/undefined
+// Stringa di ingresso Cognome viene Capitalizzata
+// Conteggio posizione a partire da 1
+
 
 var unorderedSurname = ['Vena', 'Siri', 'Biava', 'Grassi', 'Inglima', 'Neroni', 'Rispoli', 'Polino'];
 
 //chiedo il Cognome, lo inserisco nell'array e visualizzo
 var userSurname = prompt('Inserisci il tuo Cognome');
+
+//Controllo che dato Cognome non sia vuoto/undefined
+if (!userSurname) {
+  alert('Cognome Non inserito correttamente, aggiornare la pagina e ripetere');
+}
+// Stringa di ingresso Cognome viene Capitalizzata
+userSurname = userSurname.toLowerCase();
+userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1);
+
+//Aggiungo dato Cognome alla lista non ordinata
 unorderedSurname.push(userSurname);
 console.log('unorderedSurname ' + unorderedSurname);
 
