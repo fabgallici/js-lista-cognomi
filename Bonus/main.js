@@ -5,8 +5,10 @@
 // nuovo utente si trova
 
 //BONUS
-//Controllo che valore inserito non sia vuoto/undefined
+// Controllo che valore inserito non sia vuoto/undefined
 // Stringa di ingresso Cognome viene Capitalizzata
+// visualizzo array non ordinato semplificata come stringa
+// visualizzo array ordinato come lista ordinata
 // Conteggio posizione a partire da 1
 
 
@@ -27,11 +29,9 @@ userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1);
 unorderedSurname.push(userSurname);
 console.log('unorderedSurname ' + unorderedSurname);
 
-//visualizzo array non ordinato
-var unorderedOutput = document.getElementById('unordered');
-for (var b = 0; b < unorderedSurname.length; b++) {
-  unorderedOutput.innerHTML += unorderedSurname[b] + ' ';
-}
+//visualizzo array non ordinato inviato come stringa
+document.getElementById('unordered').innerHTML = unorderedSurname.join(' ');
+
 //ordino l'array alfabeticamente
 var orderedSurname = unorderedSurname.sort();
 console.log('orderedSurname ' + orderedSurname);
