@@ -40,7 +40,7 @@ console.log('orderedSurname ' + orderedSurname);
 var orderedOutput;
 for (var a = 0; a < orderedSurname.length; a++) {
   orderedOutput = document.getElementById('ordered').innerHTML;
-  document.getElementById('ordered').innerHTML = orderedOutput + orderedSurname[a] + ' ';
+  document.getElementById('ordered').innerHTML = orderedOutput + "<li>" + orderedSurname[a] + "</li>";
 }
 
 //stampo posizione dell'array in cui si trova il nome
