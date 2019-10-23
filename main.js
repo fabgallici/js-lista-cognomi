@@ -15,3 +15,14 @@ console.log(unorderedSurname);
 //ordino l'array alfabeticamente
 var orderedSurname = unorderedSurname.sort();
 console.log(orderedSurname);
+
+//stampo posizione dell'array in cui si trova il nome
+var i = 0;
+var surnameFound = false;
+while (i < orderedSurname.length && !surnameFound) {
+  if (orderedSurname[i] === userSurname) {
+    console.log('il cognome ' + userSurname + ' si trova in posizione ' + i);
+    surnameFound = true;
+  }
+  i++;
+}
