@@ -3,20 +3,3 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
-  font-family: 'Montserrat Alternates', sans-serif;
-}
-.page-wrapper {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  padding-top: 30px;
-  font-size: 18px;
-  display: flex;
-}
-.surname {
-  flex-grow: 1;
-  border: 1px solid #000;
-
-  height: 500px;
-}

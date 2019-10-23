@@ -19,7 +19,7 @@ console.log(orderedSurname);
 //visualizzo array ordinato
 var orderedOutput = document.getElementById('ordered');
 for (var a = 0; a < orderedSurname.length; a++) {
-  orderedOutput.innerHTML += orderedSurname[a] + ' - ';
+  orderedOutput.innerHTML += orderedSurname[a];
 }
 
 //stampo posizione dell'array in cui si trova il nome
@@ -28,7 +28,6 @@ var surnameFound = false;
 while (i < orderedSurname.length && !surnameFound) {
   if (orderedSurname[i] === userSurname) {
     console.log('il cognome ' + userSurname + ' si trova in posizione ' + i);
-    document.getElementById('position').innerHTML = 'il cognome ' + userSurname + ' si trova in posizione ' + i;
     surnameFound = true;
   }
   i++;
