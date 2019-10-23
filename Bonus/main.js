@@ -6,7 +6,7 @@
 
 //BONUS
 // Controllo che valore inserito non sia vuoto/undefined
-// Stringa di ingresso Cognome viene Capitalizzata
+// Stringa di ingresso Cognome prima lettera viene Capitalizzata
 // visualizzo array non ordinato semplificata come stringa
 // visualizzo array ordinato come lista ordinata
 // Conteggio posizione a partire da 1
@@ -21,8 +21,7 @@ var userSurname = prompt('Inserisci il tuo Cognome');
 if (!userSurname) {
   alert('Cognome Non inserito correttamente, aggiornare la pagina e ripetere');
 }
-// Stringa di ingresso Cognome viene Capitalizzata
-userSurname = userSurname.toLowerCase();
+// Stringa di ingresso Cognome prima lettera viene Capitalizzata
 userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1);
 
 //Aggiungo dato Cognome alla lista non ordinata
