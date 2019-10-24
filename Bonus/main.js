@@ -41,12 +41,13 @@ var orderedSurname = unorderedSurname.slice().sort();
 console.log('orderedSurname ' + orderedSurname);
 
 //visualizzo array ordinato
-var orderedOutput;
-for (var a = 0; a < orderedSurname.length; a++) {
-  orderedOutput = document.getElementById('ordered').innerHTML;
-  document.getElementById('ordered').innerHTML = orderedOutput + "<li>" + orderedSurname[a] + "</li>";
-}
+// var orderedOutput;
+// for (var a = 0; a < orderedSurname.length; a++) {
+//   orderedOutput = document.getElementById('ordered').innerHTML;
+//   document.getElementById('ordered').innerHTML = orderedOutput + "<li>" + orderedSurname[a] + "</li>";
+// }
 
+document.getElementById('ordered').innerHTML = '<li>' + orderedSurname.join('</li><li>') + '</li>';
 //stampo posizione dell'array in cui si trova il nome
 var i = 0;
 var surnameFound = false;
