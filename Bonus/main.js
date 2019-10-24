@@ -30,9 +30,14 @@ console.log('unorderedSurname ' + unorderedSurname);
 
 //visualizzo array non ordinato inviato come stringa
 document.getElementById('unordered').innerHTML = unorderedSurname.join(' ');
+//posso creare una copia array originale da poter riutilizzare (visto dopo a lezione)
+var orderedSurname = unorderedSurname.slice().sort();
 
-//ordino l'array alfabeticamente
-var orderedSurname = unorderedSurname.sort();
+
+
+//ordino l'array alfabeticamente (non creo una copia,creo un puntatore allo stesso array)
+//quindi ora sono entrambi ordinati perchè sort ordina in-place, ved slice() per salvare stato precedente di unorderedSurname
+// orderedSurname.sort();
 console.log('orderedSurname ' + orderedSurname);
 
 //visualizzo array ordinato

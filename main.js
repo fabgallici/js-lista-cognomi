@@ -12,13 +12,17 @@ var userSurname = prompt('Inserisci il tuo Cognome');
 unorderedSurname.push(userSurname);
 console.log('unorderedSurname ' + unorderedSurname);
 
+//posso creare una copia array originale da poter riutilizzare (visto dopo a lezione)
+var unorderedSurnameCopy = unorderedSurname.slice();
 //visualizzo array non ordinato
 var unorderedOutput = document.getElementById('unordered');
 for (var b = 0; b < unorderedSurname.length; b++) {
   unorderedOutput.innerHTML += unorderedSurname[b] + ' ';
 }
-//ordino l'array alfabeticamente
-var orderedSurname = unorderedSurname.sort();
+//ordino l'array alfabeticamente (non creo una copia,creo un puntatore allo stesso array)
+//quindi ora sono entrambi ordinati perchè sort ordina in-place, ved slice() per salvare stato precedente di unorderedSurname
+//VED Bonus Versione Compatta
+var orderedSurname = unorderedSurnameCopy.sort();
 console.log('orderedSurname ' + orderedSurname);
 
 //visualizzo array ordinato
