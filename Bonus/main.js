@@ -58,3 +58,7 @@ while (i < orderedSurname.length && !surnameFound) {
   }
   i++;
 }
+
+//stampo pos usando metodo veloce
+var orderPos = orderedSurname.indexOf(userSurname) + 1;
+console.log('Posizione ', orderPos);
